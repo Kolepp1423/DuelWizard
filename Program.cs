@@ -1,4 +1,6 @@
-﻿namespace DuelWizard
+﻿using DuelWizard;
+
+namespace DuelWizard
 {
     class Wizard
     {
@@ -31,5 +33,27 @@
         {
             Console.WriteLine($"Wizard: {Name} | Energy: {Energy}");
         }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Wizard wizard1 = new Wizard("Gandalf", 20);
+        Wizard wizard2 = new Wizard("Saruman", 15);
+
+        wizard1.ShowStats();
+        wizard2.ShowStats();
+        System.Console.WriteLine();
+
+        wizard1.Attack(wizard2);
+        wizard2.Attack(wizard1);
+        wizard1.Attack(wizard2);
+
+        wizard1.ShowStats();
+        wizard2.ShowStats();
+
+        System.Console.ReadLine();
     }
 }
