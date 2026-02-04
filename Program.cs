@@ -1,1 +1,6 @@
-﻿
+﻿namespace DuelWizard
+{
+    class Wizard
+    {
+    }
+}
